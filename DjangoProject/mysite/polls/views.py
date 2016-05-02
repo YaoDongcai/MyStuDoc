@@ -1,15 +1,36 @@
 from django.shortcuts import render,get_object_or_404
 from django.http import HttpResponse
 from polls.models import Question,Choice
-# index page
+# 首页 page
 def index(request):
     template = 'polls/index.html'
     return render(request,template)
 
-
+# 关于我们 page关于cj 和 办公
 def about(request):
     template = 'polls/about.html'
     return render(request,template)
+
+#   联系我们 page ------》
+def contact(request):
+    template = 'polls/contact.html'
+    return render(request,template)
+
+#   需求订单------>学员；教员
+def order(request):
+    template='polls/order.html'
+    return render(request,template)
+
+def getOrder(request,strKey):
+    pass
+#     和数据库做post提交后的数据
+#     将数据写进数据库中
+
+
+
+
+
+
 #detail page
 # def detail(request,question_id):
 #     question = get_object_or_404(Question,pk=question_id)
